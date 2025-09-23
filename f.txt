@@ -1,0 +1,13 @@
+<GoogleAddressAutocomplete
+          apiKey="AIzaSyDeF2diBzxl7qfOjBUUyGx8OOYwzUvJZco"
+          @callback="onPlaceSearch"    
+          id="searchbar"
+          placeholder=" Пребарај"
+        />
+
+<div id="dropdown">
+        <button id="dropbtn" @click="showdropdown = !showdropdown;" style="font-weight: bold;">Додади во:</button>
+        <div id="dropdown-content" v-show="showdropdown">
+          <div v-for="(day,i) in days" @click="addToList(i);">Ден {{ day.n }}</div>
+        </div>
+      </div>
